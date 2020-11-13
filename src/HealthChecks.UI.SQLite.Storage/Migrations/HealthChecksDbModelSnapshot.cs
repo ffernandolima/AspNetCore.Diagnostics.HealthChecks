@@ -98,6 +98,9 @@ namespace HealthChecks.UI.SQLite.Storage.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Tags")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HealthCheckExecutionId");
@@ -119,7 +122,7 @@ namespace HealthChecks.UI.SQLite.Storage.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT")
-                        .HasMaxLength(50);
+                        .HasMaxLength(500);
 
                     b.Property<DateTime>("On")
                         .HasColumnType("TEXT");
